@@ -1,4 +1,4 @@
-<html><head><base href="https://websim.dev/word-game/">
+<html><head><base href="https://camiloduvane.github.io/Matlhemele2024/ ">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Cristão</title>
@@ -690,7 +690,7 @@
     function updateFullscreenButtonText() {
       const fullscreenButton = document.getElementById('fullscreenToggle');
       if (document.fullscreenElement) {
-        fullscreenButton.textContent = 'Sair da Tela Cheia';
+        fullscreenButton.textContent = 'Tela Cheia';
       } else {
         fullscreenButton.textContent = 'Tela Cheia';
       }
