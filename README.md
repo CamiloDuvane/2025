@@ -206,7 +206,7 @@
           <option value="timed">Com tempo</option>
         </select>
         <div id="timerSetup" class="hidden">
-          <input type="number" id="gameMinutes" placeholder="Minutos" min="0" max="59" value="10">
+          <input type="number" id="gameMinutes" placeholder="Minutos" min="0" max="59" value="5">
           <input type="number" id="gameSeconds" placeholder="Segundos" min="0" max="59" value="0">
         </div>
         <button id="startGameBtn" class="hidden">Iniciar</button>
@@ -215,7 +215,7 @@
         <p id="question"></p>
         <div id="answerOptions"></div>
         <p id="result"></p>
-        <p id="score">Pontuação: 0/50</p>
+        <p id="score">Pontuação: 0/60</p>
         <p id="timer" class="hidden"></p>
         <button id="stopGameBtn" class="hidden">Parar Jogo</button>
       </div>
