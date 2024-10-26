@@ -209,7 +209,7 @@
           <input type="number" id="gameMinutes" placeholder="Minutos" min="0" max="59" value="10">
           <input type="number" id="gameSeconds" placeholder="Segundos" min="0" max="59" value="0">
         </div>
-        <button id="startGameBtn" class="hidden">Iniciar Jogo</button>
+        <button id="startGameBtn" class="hidden">Iniciar</button>
       </div>
       <div id="gameContent" class="hidden">
         <p id="question"></p>
@@ -220,7 +220,7 @@
         <button id="stopGameBtn" class="hidden">Parar Jogo</button>
       </div>
       <div id="gameSummary" class="hidden">
-        <h2>Resumo do Jogo</h2>
+        <h2>Resumo</h2>
         <table id="summaryTable">
           <thead>
             <tr>
@@ -344,8 +344,8 @@
         correctAnswer: 1
       },
       {
-        question: "Quem foi o primeiro mártir cristão mencionado no Novo Testamento?",
-        options: ["Paulo", "Pedro", "Tiago", "Estêvão"],
+        question: "Qual é o significado da abreviação MEA?",
+        options: ["Ministério Em Acção", "Ministro Em Andamento", "Ministro Evangelho Antigo", "Ministério Evangelho em Acção"],
         correctAnswer: 3
       },
       {
@@ -429,7 +429,7 @@
         correctAnswer: 2
       },
       {
-        question: "Quem foi o rei que dividiu o Mar Vermelho?",
+        question: "Quem foi o profeta que dividiu o Mar Vermelho?",
         options: ["Faraó", "Moisés", "Josué", "Davi"],
         correctAnswer: 1
       },
@@ -494,10 +494,15 @@
         correctAnswer: 1
       },
       {
-        question: "Qual era o nome do servo de Abraão que foi buscar esposa para Isaque?",
-        options: ["Eliezer", "Ismael", "Eleazar", "Eliézer"],
-        correctAnswer: 0
-      }
+        question: "Qual é o nome do fundador do Ministério Evangelho em Acção?",
+        options: ["Mario Machel", "Filipe Jacinto Nyusi​", "Luís Betuel Maposse", "Samora Moisés Machel"],
+        correctAnswer: 2
+      },
+      {
+        question:"Em que ano foi fundado o MEA?",
+        Options: ["2014", "1999", "2012", "2000"],
+        correctAnswer: 3
+      } 
     ];
 
     function shuffleArray(array) {
