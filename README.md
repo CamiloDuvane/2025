@@ -500,7 +500,7 @@
       },
       {
         question:"Em que ano foi fundado o MEA?",
-        Options: ["2014", "1999", "2012", "2000"],
+        options: ["2014", "1999", "2012", "2000"],
         correctAnswer: 3
       } 
     ];
