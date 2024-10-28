@@ -324,19 +324,19 @@
         correctAnswer: 2
       },
       {
-        question: "Quem foram os primeiros discípulos chamados por Jesus?",
-        options: ["Pedro e André", "Tiago e João", "Mateus e Tomé", "Felipe e Bartolomeu"],
+        question: "Qual é o Título do primeiro livro do Pai Luís Maposse?",
+        options: ["Meta Capital", "Metas Realizadas", "Matical ", "Metalizado"],
         correctAnswer: 0
       },
       {
-        question: "Em qual monte Moisés recebeu os Dez Mandamentos?",
-        options: ["Sinai", "Carmelo", "Tabor", "Horebe"],
-        correctAnswer: 0
+        question: "Qual é o Título do segundo livro do Pai Luís Maposse??",
+        options: ["Meta Capital", "Maposse vulume 2", "Captalizando o Futuro", "Capitalizando o Passado"],
+        correctAnswer: 3
       },
       {
-        question: "Quem traiu Jesus por 30 moedas de prata?",
-        options: ["Pedro", "Tomé", "Judas Iscariotes", "Simão, o Zelote"],
-        correctAnswer: 2
+        question: "Qual é o Título do terceiro livro do Pai Luís Maposse??",
+        options: ["O Poder da Comida", "Metas Alcançadas", "O Poder da Palavra", "CAJ"],
+        correctAnswer: 0
       },
       {
         question: "Qual era o nome do filho de Abraão e Sara?",
@@ -344,13 +344,13 @@
         correctAnswer: 1
       },
       {
-        question: "Qual é o significado da abreviação MEA?",
+        question: "Qual é o significado da sigla MEA?",
         options: ["Ministério Em Acção", "Ministro Em Andamento", "Ministro Evangelho Antigo", "Ministério Evangelho em Acção"],
         correctAnswer: 3
       },
       {
-        question: "Qual profeta foi levado ao céu em um redemoinho?",
-        options: ["Eliseu", "Elias", "Enoque", "Ezequiel"],
+        question: "Qual é o significado da sigla CAJ?",
+        options: ["Centro de Apoio ao Jovem", "Campanha Almas para Jesus", "Campanha Acção Juvenil", "Campanha Almas Juvenil"],
         correctAnswer: 1
       },
       {
