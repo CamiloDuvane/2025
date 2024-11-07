@@ -289,8 +289,8 @@
         correctAnswer: 2
       },
       {
-        question: "Qual era o nome original de Paulo?",
-        options: ["Silas", "Barnabé", "Timóteo", "Saulo"],
+        question: "Quantos livros há no Antigo Testamento?",
+        options: ["27", "34", "30", "39"],
         correctAnswer: 3
       },
       {
