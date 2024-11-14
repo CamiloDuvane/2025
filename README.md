@@ -55,6 +55,22 @@
     .hidden {
       display: none;
     }
+    #registrationForm {
+      display: block;
+    }
+    #gameInterface {
+      display: none;
+    }
+    .error-message {
+      color: #e74c3c;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    #playerRegistration {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
     #gameInterface {
       display: flex;
       flex-direction: column;
@@ -84,11 +100,9 @@
       transition: background-color 0.3s;
       font-weight: 600;
     }
-
     #fullscreenToggle:hover {
       background-color: #3498db;
     }
-
     #playerName {
       font-weight: 600;
     }
@@ -163,35 +177,14 @@
 </head>
 <body>
   <div class="container">
-    <div id="registerPage">
+    <div id="registrationForm">
       <h1>Cadastro</h1>
-      <form id="registerForm">
-        <input type="text" id="registerName" placeholder="Nome" required>
-        <button type="submit">Cadastrar</button>
+      <form id="playerRegistration">
+        <input type="text" id="registerName" placeholder="Nome">
+        <button type="submit">Começar</button>
       </form>
     </div>
-
-    <div id="loginPage" class="hidden">
-      <h1>Login</h1>
-      <form id="loginForm">
-        <input type="text" id="loginUsername" placeholder="Usuário" required>
-        <input type="password" id="loginPassword" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
-      </form>
-      <button id="forgotPassword">Esqueci a senha</button>
-    </div>
-
-    <div id="recoverPage" class="hidden">
-      <h1>Recuperar Senha</h1>
-      <form id="recoverForm">
-        <input type="text" id="recoverName" placeholder="Nome" required>
-        <input type="number" id="recoverAge" placeholder="Idade" required>
-        <input type="text" id="recoverCongregation" placeholder="Congregação" required>
-        <button type="submit">Recuperar</button>
-      </form>
-    </div>
-
-    <div id="gameInterface" class="hidden">
+    <div id="gameInterface">
       <div id="menu">
         <span id="playerName"></span>
         <span id="currentDateTime"></span>
@@ -246,7 +239,12 @@
   </div>
 
   <script>
-    let currentUser = '';
+    const randomNames = [
+      "João", "Maria", "Pedro", "Ana", "Lucas", "Julia", 
+      "Gabriel", "Sofia", "Miguel", "Isabella", "Arthur", "Helena",
+      "Davi", "Alice", "Bernardo", "Laura", "Heitor", "Valentina"
+    ];
+
     let score = 0;
     let questionIndex = 0;
     let timerInterval;
@@ -280,7 +278,7 @@
         correctAnswer: 2
        }, 
 
-        {
+      {
         question: "Quantos livros tem o Novo Testamento? ",
         options: ["27", "23", "32", "20"], 
         correctAnswer: 0
@@ -310,83 +308,83 @@
        },
       {
       question: "No sistema Moderno o que acontece com todos os livros que os nomes vão até 05 letras? ",
-        options: ["Não se abrevia", "Se abrevia", "Usamos as Consoantes do nome", "Usamos a primeira Consoante e o primeira vogal"], 
-        correctAnswer: 0
-       },
+      options: ["Não se abrevia", "Se abrevia", "Usamos as Consoantes do nome", "Usamos a primeira Consoante e o primeira vogal"], 
+      correctAnswer: 0
+      },
 
       {
       question: "Em que dia da semana da criação *Deus fez a Luz*? ",
-        options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
-        correctAnswer: 2
-       },
+      options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
+      correctAnswer: 2
+      },
 
       {
       question: "Em que dia da semana da criação *Separação entre a Água e Água, Surgimento do Céu*? ",
-        options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
-        correctAnswer: 0
-       },
+      options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
+      correctAnswer: 0
+      },
 
       {
       question: "Em que dia da semana da criação *Deus fez terra seca e vegetação*? ",
-        options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
-        correctAnswer: 3
-       },
+      options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
+      correctAnswer: 3
+      },
 
 
       {
       question: "Em que dia da semana da criação *Deus criou luminares, a Lua e as estrelas*? ",
-        options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
-        correctAnswer: 1
-       },
+      options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
+      correctAnswer: 1
+      },
 
 
       {
       question: "Em que dia da semana da criação *Deus fez todo Reptil e toda ave*? ",
-        options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
-        correctAnswer: 3
-       },
+      options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
+      correctAnswer: 3
+      },
 
       {
       question: "Em que dia da semana da criação *Deus fez animais terrestres e o Homem*? ",
-        options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
-        correctAnswer: 0
-       },
+      options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
+      correctAnswer: 0
+      },
 
       {
       question: "Em que dia da semana da criação *Deus descansou*?",
-        options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
-        correctAnswer: 2
-       },
+      options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
+      correctAnswer: 2
+      },
 
       {
       question: "Que Criatura, para ser feito foi preciso um Soleno Conselho Divino?",
-        options: ["Elefante", "Leão", "Mulher", "Homem"], 
-        correctAnswer: 3
-       },
+      options: ["Elefante", "Leão", "Mulher", "Homem"], 
+      correctAnswer: 3
+      },
 
       {
       question: "Qual Das alternativas descreve a criação do Homem segundo a Bíblia? ",
-        options: ["Do pó da terra", "Feito da luz do sol", "Formado da água do mar", "Criado a partir de estrelas"], 
-        correctAnswer: 0
-       },
+      options: ["Do pó da terra", "Feito da luz do sol", "Formado da água do mar", "Criado a partir de estrelas"], 
+      correctAnswer: 0
+      },
 
       {
       question: "Qual é a técnica cirúrgica inovadora usada por Deus, segundo o livro de Gênesis, para virar a primeira Mulher? ",
-        options: ["Fez um clone direto do pó da terra", "Transformou água em ossos e carne", "Utilizou uma costela do Homem como bese", "Misturou pó da terra com luz do sol"], 
-        correctAnswer: 2
-       },
+      options: ["Fez um clone direto do pó da terra", "Transformou água em ossos e carne", "Utilizou uma costela do Homem como bese", "Misturou pó da terra com luz do sol"], 
+      correctAnswer: 2
+      },
 
        {
       question: "Deus fez o Homem dotado de pleno poder para governar, e em paralelo uma ordem proibitiva.",
-        options: ["Falso", "Verdade"], 
-        correctAnswer: 1
-       },
+      options: ["Falso", "Verdade"], 
+      correctAnswer: 1
+      },
 
 {
       question: "Qual era o tipo de arvore Proibida?",
-        options: ["Macaneira", "a", "Verdade", "Verdade"], 
-        correctAnswer: 1
-       }
+      options: ["Macaneira", "a", "Verdade", "Verdade"], 
+      correctAnswer: 1
+      }
     ];
 
     function shuffleArray(array) {
@@ -404,58 +402,42 @@
       }
     }
 
-    document.getElementById('registerForm').addEventListener('submit', function(e) {
+    document.getElementById('playerRegistration').addEventListener('submit', function(e) {
       e.preventDefault();
-      currentUser = document.getElementById('registerName').value;
-      document.getElementById('registerPage').classList.add('hidden');
-      document.getElementById('loginPage').classList.remove('hidden');
-    });
-
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const username = document.getElementById('loginUsername').value;
-      const password = document.getElementById('loginPassword').value;
-      if ((username === currentUser || username === 'Camilo Duvane' || username === 'Cíntia Mucumbi') &&
-          (password === '123456' || password === '6363')) {
-        showGameInterface();
-      } else {
-        alert('Usuário ou senha incorretos');
+      
+      let playerName = document.getElementById('registerName').value.trim();
+      if (!playerName) {
+        playerName = randomNames[Math.floor(Math.random() * randomNames.length)];
       }
-    });
+      
+      localStorage.setItem('playerName', playerName);
+      
+      document.getElementById('registrationForm').style.display = 'none';
+      document.getElementById('gameInterface').style.display = 'block';
+      document.getElementById('playerName').textContent = playerName;
 
-    document.getElementById('forgotPassword').addEventListener('click', function() {
-      document.getElementById('loginPage').classList.add('hidden');
-      document.getElementById('recoverPage').classList.remove('hidden');
-    });
-
-    document.getElementById('recoverForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('recoverName').value;
-      if (name === currentUser) {
-        alert(`Nome: ${name}\nSenha: 123456`);
-      } else {
-        alert('Nome não encontrado');
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
       }
-      document.getElementById('recoverPage').classList.add('hidden');
-      document.getElementById('loginPage').classList.remove('hidden');
+
+      showGameInterface();
     });
 
     function showGameInterface() {
-      document.getElementById('loginPage').classList.add('hidden');
-      document.getElementById('gameInterface').classList.remove('hidden');
       document.getElementById('gameSetup').classList.remove('hidden');
-      document.getElementById('playerName').textContent = currentUser;
+      const playerName = localStorage.getItem('playerName');
+      document.getElementById('playerName').textContent = playerName;
       updateDateTime();
       setInterval(updateDateTime, 1000);
-      
-      requestFullscreen();
-      updateFullscreenButtonText();
     }
 
-    function updateDateTime() {
-      const now = new Date();
-      document.getElementById('currentDateTime').textContent = now.toLocaleString();
-    }
+    window.addEventListener('load', function() {
+      if (document.fullscreenEnabled) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.log('Error attempting to enable fullscreen:', err);
+        });
+      }
+    });
 
     document.getElementById('gameType').addEventListener('change', function() {
       gameType = this.value;
@@ -539,7 +521,7 @@
       clearInterval(timerInterval);
       document.getElementById('gameContent').classList.add('hidden');
       document.getElementById('gameSummary').classList.remove('hidden');
-      document.getElementById('summaryName').textContent = currentUser;
+      document.getElementById('summaryName').textContent = localStorage.getItem('playerName');
       document.getElementById('summaryCorrect').textContent = score;
       document.getElementById('summaryIncorrect').textContent = incorrectAnswers;
       document.getElementById('summaryTotal').textContent = questionIndex;
@@ -584,4 +566,4 @@
     document.addEventListener('fullscreenchange', updateFullscreenButtonText);
   </script>
 </body>
-</html> 
+</html>
