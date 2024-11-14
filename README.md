@@ -253,256 +253,140 @@
     let gameType = '';
     let incorrectAnswers = 0;
     const questions = [
-      {
-        question: "Qual é o primeiro livro da Bíblia?",
-        options: ["Gênesis", "Êxodo", "Levítico", "Números"],
-        correctAnswer: 0
-      },
-      {
-        question: "Quem construiu a arca?",
-        options: ["Abraão", "Moisés", "Noé", "Davi"],
+       {
+        question: "O que é a Bíblia?", 
+        options: ["É conjunto de livros que contam histórias", "É um livro que serve para ser usar nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro usado na Escola"], 
         correctAnswer: 2
-      },
+      }, 
       {
-        question: "Quantos mandamentos Deus deu a Moisés?",
-        options: ["5", "7", "10", "12"],
-        correctAnswer: 2
-      },
-      {
-        question: "Quem foi lançado na cova dos leões?",
-        options: ["Daniel", "José", "Jonas", "Elias"],
-        correctAnswer: 0
-      },
-      {
-        question: "Quem matou Golias?",
-        options: ["Saul", "Davi", "Sansão", "Samuel"],
+        question: "Em quantas partes está agrupada a Bíblia?", 
+        options: ["3", "2", "1", "0"],
         correctAnswer: 1
       },
       {
-        question: "Qual profeta foi engolido por um grande peixe?",
-        options: ["Jeremias", "Ezequiel", "Jonas", "Isaías"],
-        correctAnswer: 2
-      },
-      {
-        question: "Quem foi o primeiro rei de Israel?",
-        options: ["Davi", "Salomão", "Saul", "Samuel"],
-        correctAnswer: 2
-      },
-      {
-        question: "Quantos livros há no Antigo Testamento?",
-        options: ["27", "34", "30", "39"],
+        question: "Como estão agrupados os livros da Bíblia? ",
+        options: ["Antigo Testamento e Novo Testemunha", "Velho Testamento e Nova Testemunha", "Velho Testemunho e Novo Testamento", "Antigo Testamento e Novo Testamento"], 
         correctAnswer: 3
-      },
+       }, 
       {
-        question: "Quem negou Jesus três vezes?",
-        options: ["João", "Tiago", "Pedro", "André"],
-        correctAnswer: 2
-      },
-      {
-        question: "Qual era o nome do jardim onde Adão e Eva viviam?",
-        options: ["Éden", "Getsêmani", "Paraíso", "Canaã"],
+        question: "Quantos livros tem a Bíblia? ",
+        options: ["66", "64", "62", "60"], 
         correctAnswer: 0
-      },
+       }, 
+
       {
-        question: "Quem foi o pai de Salomão?",
-        options: ["Saul", "Davi", "Josias", "Roboão"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quantos livros há no Novo Testamento?",
-        options: ["27", "39", "66", "73"],
-        correctAnswer: 0
-      },
-      {
-        question: "Quem escreveu a maior parte do Novo Testamento?",
-        options: ["Pedro", "João", "Paulo", "Lucas"],
+        question: "Quantos livros tem o Antigo Testamento? ",
+        options: ["30", "24", "39", "37"], 
         correctAnswer: 2
-      },
-      {
-        question: "Qual era o nome da esposa de Abraão?",
-        options: ["Rebeca", "Raquel", "Sara", "Lia"],
-        correctAnswer: 2
-      },
-      {
-        question: "Qual é o Título do primeiro livro do Pai Luís Maposse?",
-        options: ["Meta Capital", "Metas Realizadas", "Matical ", "Metalizado"],
+       }, 
+
+        {
+        question: "Quantos livros tem o Novo Testamento? ",
+        options: ["27", "23", "32", "20"], 
         correctAnswer: 0
-      },
+       }, 
+
       {
-        question: "Qual é o Título do segundo livro do Pai Luís Maposse??",
-        options: ["Meta Capital", "Maposse vulume 2", "Captalizando o Futuro", "Capitalizando o Passado"],
+       question: "O Antigo Testamento está subdividido em quantos grupos? ",
+        options: ["2", "3", "4", "5"], 
         correctAnswer: 3
-      },
+       }, 
       {
-        question: "Qual é o Título do terceiro livro do Pai Luís Maposse??",
-        options: ["O Poder da Comida", "Metas Alcançadas", "O Poder da Palavra", "CAJ"],
+       question: "Qual desses grupos de livros fazem parte do Antigo Testamento?",
+        options: ["Livros Evagelicos, Livros Históricos, Livros Poéticos, Livros dos Profetas Maiores e Livros dos poetas Menores", "Livros Patateus, Livros Históricos, Livros Poéticos, Livros dos Profetas", "Livros Patateus, Livros Históricos, Livros Poéticos, Livros dos Profetas Maiores e Livros dos Profetas Menores", "Genises, Deternomio, Josué, Ester, Jô, cântaro de Salomão, Isaías, Daniel, Oseias e Malaquias"], 
+        correctAnswer: 2
+       }, 
+
+      {
+        question: "Qual desses grupos de livros fazem parte do Antigo Testamento?",
+        options: ["Livros Evangélicos, Livros Históricos, Livros Epístolas / Cartas Paulina, Livros Epístolas / Cartas Gerais, Livros Proféticos / Revelações", "Livros Históricos, Livros Epístolas / Cartas Paulina, Livros Epístolas / Cartas Gerais, Livros Proféticos", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros Proféticos / Revelações", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros de Revelações"], 
         correctAnswer: 0
       },
+
       {
-        question: "Qual era o nome do filho de Abraão e Sara?",
-        options: ["Ismael", "Isaque", "Jacó", "Esaú"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual é o significado da sigla MEA?",
-        options: ["Ministério Em Acção", "Ministro Em Andamento", "Ministro Evangelho Antigo", "Ministério Evangelho em Acção"],
+       question: "Das opções as seguir qual os Sistemas de Abreviação dos livros da Bíblia que aprendeste? ",
+        options: ["Sistema Antigo e Sistema Novo", "Sistema Velho e Sistema Actualizado", "Sistema Clássico e Sistema Actualizado", "Sistema Clássico e Sistema Moderno"], 
         correctAnswer: 3
-      },
+       },
       {
-        question: "Qual é o significado da sigla CAJ?",
-        options: ["Centro de Apoio ao Jovem", "Campanha Almas para Jesus", "Campanha Acção Juvenil", "Campanha Almas Juvenil"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quem era o rei quando Jesus nasceu?",
-        options: ["César Augusto", "Herodes", "Pilatos", "Tibério"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual era o nome do rio onde João Batista batizava?",
-        options: ["Nilo", "Jordão", "Tigre", "Eufrates"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quantos anos Noé levou para construir a arca?",
-        options: ["40", "100", "120", "150"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quem foi o último juiz de Israel antes do período dos reis?",
-        options: ["Gideão", "Sansão", "Samuel", "Eli"],
-        correctAnswer: 2
-      },
-      {
-        question: "Qual era o nome do irmão de Moisés?",
-        options: ["Arão", "Hur", "Jetro", "Josué"],
+      question: "No sistema Moderno o que acontece com todos os livros que os nomes vão até 05 letras? ",
+        options: ["Não se abrevia", "Se abrevia", "Usamos as Consoantes do nome", "Usamos a primeira Consoante e o primeira vogal"], 
         correctAnswer: 0
-      },
+       },
+
       {
-        question: "Quem escreveu o livro de Apocalipse?",
-        options: ["Paulo", "Pedro", "João", "Tiago"],
+      question: "Em que dia da semana da criação *Deus fez a Luz*? ",
+        options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
         correctAnswer: 2
-      },
+       },
+
       {
-        question: "Qual era o nome da sogra de Rute?",
-        options: ["Noemi", "Orfa", "Raquel", "Ester"],
+      question: "Em que dia da semana da criação *Separação entre a Água e Água, Surgimento do Céu*? ",
+        options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
         correctAnswer: 0
-      },
+       },
+
       {
-        question: "Quem foi o sucessor de Moisés na liderança de Israel?",
-        options: ["Calebe", "Josué", "Arão", "Eleazar"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual profeta foi chamado ainda criança?",
-        options: ["Jeremias", "Samuel", "Daniel", "Isaías"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quem era o pai de João Batista?",
-        options: ["José", "Zacarias", "Joaquim", "Zebedeu"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual era o nome da mulher de Abraão que lhe deu Ismael?",
-        options: ["Sara", "Agar", "Rebeca", "Quetura"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quem foi o rei que pediu sabedoria a Deus?",
-        options: ["Davi", "Salomão", "Ezequias", "Josias"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual era o nome do anjo que anunciou o nascimento de Jesus a Maria?",
-        options: ["Miguel", "Rafael", "Gabriel", "Uriel"],
-        correctAnswer: 2
-      },
-      {
-        question: "Quem foi o pai de Moisés?",
-        options: ["Anrão", "Levi", "Gérson", "Coate"],
-        correctAnswer: 0
-      },
-      {
-        question: "Qual era o nome do discípulo que duvidou da ressurreição de Jesus?",
-        options: ["Filipe", "Bartolomeu", "Tomé", "Mateus"],
-        correctAnswer: 2
-      },
-      {
-        question: "Quem foi o profeta que dividiu o Mar Vermelho?",
-        options: ["Faraó", "Moisés", "Josué", "Davi"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual profeta foi alimentado por corvos?",
-        options: ["Eliseu", "Elias", "Ezequiel", "Jeremias"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quem era o rei de Babilônia quando Daniel foi lançado na cova dos leões?",
-        options: ["Nabucodonosor", "Belsazar", "Dario", "Ciro"],
-        correctAnswer: 2
-      },
-      {
-        question: "Qual era o nome do homem rico que Jesus disse ser mais difícil entrar no Reino de Deus do que um camelo passar pelo fundo de uma agulha?",
-        options: ["Zaqueu", "Nicodemos", "Jovem Rico", "Lázaro"],
-        correctAnswer: 2
-      },
-      {
-        question: "Quem foi o primeiro homem criado por Deus?",
-        options: ["Noé", "Abraão", "Adão", "Enoque"],
-        correctAnswer: 2
-      },
-      {
-        question: "Qual era o nome da esposa de Isaque?",
-        options: ["Sara", "Rebeca", "Raquel", "Lia"],
-        correctAnswer: 1
-      },
-      {
-        question: "Quem foi o primeiro rei a unir todo o reino de Israel?",
-        options: ["Saul", "Davi", "Salomão", "Roboão"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual era o nome do monte onde Jesus foi transfigurado?",
-        options: ["Sinai", "Carmelo", "Tabor", "Oliveiras"],
-        correctAnswer: 2
-      },
-      {
-        question: "Quem era o sumo sacerdote quando Jesus foi crucificado?",
-        options: ["Anás", "Caifás", "Gamaliel", "Nicodemos"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual era o nome do publicano que subiu em uma árvore para ver Jesus?",
-        options: ["Mateus", "Levi", "Zaqueu", "Nicodemos"],
-        correctAnswer: 2
-      },
-      {
-        question: "Quem foi o profeta que desafiou os profetas de Baal no Monte Carmelo?",
-        options: ["Eliseu", "Elias", "Isaías", "Jeremias"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual era o nome da mulher de Jó?",
-        options: ["Não é mencionado", "Zilpa", "Bila", "Dina"],
-        correctAnswer: 0
-      },
-      {
-        question: "Quem era o pai de João e Tiago, os filhos do trovão?",
-        options: ["José", "Zebedeu", "Alfeu", "Simão"],
-        correctAnswer: 1
-      },
-      {
-        question: "Qual é o nome do fundador do Ministério Evangelho em Acção?",
-        options: ["Mario Machel", "Filipe Jacinto Nyusi​", "Luís Betuel Maposse", "Samora Moisés Machel"],
-        correctAnswer: 2
-      },
-      {
-        question:"Em que ano foi fundado o MEA?",
-        options: ["2014", "1999", "2012", "2000"],
+      question: "Em que dia da semana da criação *Deus fez terra seca e vegetação*? ",
+        options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
         correctAnswer: 3
-      } 
+       },
+
+
+      {
+      question: "Em que dia da semana da criação *Deus criou luminares, a Lua e as estrelas*? ",
+        options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
+        correctAnswer: 1
+       },
+
+
+      {
+      question: "Em que dia da semana da criação *Deus fez todo Reptil e toda ave*? ",
+        options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
+        correctAnswer: 3
+       },
+
+      {
+      question: "Em que dia da semana da criação *Deus fez animais terrestres e o Homem*? ",
+        options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
+        correctAnswer: 0
+       },
+
+      {
+      question: "Em que dia da semana da criação *Deus descansou*?",
+        options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
+        correctAnswer: 2
+       },
+
+      {
+      question: "Que Criatura, para ser feito foi preciso um Soleno Conselho Divino?",
+        options: ["Elefante", "Leão", "Mulher", "Homem"], 
+        correctAnswer: 3
+       },
+
+      {
+      question: "Qual Das alternativas descreve a criação do Homem segundo a Bíblia? ",
+        options: ["Do pó da terra", "Feito da luz do sol", "Formado da água do mar", "Criado a partir de estrelas"], 
+        correctAnswer: 0
+       },
+
+      {
+      question: "Qual é a técnica cirúrgica inovadora usada por Deus, segundo o livro de Gênesis, para virar a primeira Mulher? ",
+        options: ["Fez um clone direto do pó da terra", "Transformou água em ossos e carne", "Utilizou uma costela do Homem como bese", "Misturou pó da terra com luz do sol"], 
+        correctAnswer: 2
+       },
+
+       {
+      question: "Deus fez o Homem dotado de pleno poder para governar, e em paralelo uma ordem proibitiva.",
+        options: ["Falso", "Verdade"], 
+        correctAnswer: 1
+       },
+
+{
+      question: "Qual era o tipo de arvore Proibida?",
+        options: ["Macaneira", """Verdade""Verdade"], 
+        correctAnswer: 1
+       }
     ];
 
     function shuffleArray(array) {
