@@ -173,6 +173,21 @@
       color: #777;
       font-size: 0.9rem;
     }
+    #orderSelection {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    #orderCode {
+      width: 120px;
+    }
+    #questionOrder {
+      flex: 1;
+    }
+    input:disabled, select:disabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 <body>
@@ -193,6 +208,13 @@
       <div id="gameSetup" class="hidden">
         <h2>Mundo Cristão</h2>
         <p>Selecione o tipo de jogo para começar</p>
+        <div id="orderSelection" style="margin-bottom: 1rem;">
+          <input type="password" id="orderCode" placeholder="Código de acesso" maxlength="4">
+          <select id="questionOrder" disabled>
+            <option value="random">Perguntas Aleatórias</option>
+            <option value="sequential">Perguntas em Ordem</option>
+          </select>
+        </div>
         <select id="gameType">
           <option value="">Tipo de jogo</option>
           <option value="infinite">Infinito</option>
@@ -439,6 +461,20 @@
       }
     });
 
+    document.getElementById('orderCode').addEventListener('input', function() {
+      const code = this.value;
+      const orderSelect = document.getElementById('questionOrder');
+      
+      if (code === '6363') {
+        orderSelect.disabled = false;
+        this.style.borderColor = '#2ecc71';
+      } else {
+        orderSelect.disabled = true;
+        orderSelect.value = 'random';
+        this.style.borderColor = '#e74c3c';
+      }
+    });
+
     document.getElementById('gameType').addEventListener('change', function() {
       gameType = this.value;
       const timerSetup = document.getElementById('timerSetup');
@@ -454,7 +490,10 @@
     document.getElementById('startGameBtn').addEventListener('click', startGame);
 
     function startGame() {
-      shuffleArray(questions);
+      const orderType = document.getElementById('questionOrder').value;
+      if (orderType === 'random') {
+        shuffleArray(questions);
+      }
       document.getElementById('gameSetup').classList.add('hidden');
       document.getElementById('gameContent').classList.remove('hidden');
       if (gameType === 'timed') {
