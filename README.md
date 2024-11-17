@@ -466,7 +466,7 @@
       const code = this.value;
       const orderSelect = document.getElementById('questionOrder');
       
-      if (code === '6363') {
+      if (code === '1234') {
         orderSelect.disabled = false;
         this.style.borderColor = '#2ecc71';
       } else {
