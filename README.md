@@ -276,7 +276,7 @@
     const questions = [
        {
         question: "O que é a Bíblia?", 
-        options: ["É conjunto de livros que contam histórias", "É um livro que serve para ser usar nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro usado na Escola"], 
+        options: ["É conjunto de livros que contam histórias", "É um livro que serve para ser usar nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
         correctAnswer: 2
       }, 
       {
