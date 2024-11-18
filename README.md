@@ -321,7 +321,7 @@
         correctAnswer: 0
       },
       {
-       question: "Das opções as seguir qual os Sistemas de Abreviação dos livros da Bíblia que aprendeste? ",
+       question: "Das opções a seguir, qual é o Sistema de Abreviação dos livros da Bíblia que aprendeste? ",
         options: ["Sistema Antigo e Sistema Novo", "Sistema Velho e Sistema Actualizado", "Sistema Clássico e Sistema Actualizado", "Sistema Clássico e Sistema Moderno"], 
         correctAnswer: 3
       },
@@ -421,18 +421,18 @@
       correctAnswer: 0
       },
       {
-      question: "Com a queda do Homem o Relacionamento entre o Homem e Deus foi Prejudicado. Qual e o tipo de Consequencias?",
-      options: ["Consequencia Fisica", "Consequencia Espiritual"], 
+      question: "Com a queda do Homem o Relacionamento entre o Homem e Deus foi Prejudicado. Qual e o tipo de Consequências?",
+      options: ["ConsequênciaFisica", "Consequência Espiritual"], 
       correctAnswer: 1
       },
       {
-      question: "Com a queda do Homem, o home passou a ficar Doente. Qual e o tipo de Consequencias?",
-      options: ["Consequencia Fisica", "Consequencia Espiritual"], 
+      question: "Com a queda do Homem, o home passou a ficar Doente. Qual e o tipo de Consequências?",
+      options: ["Consequência Fisica", "Consequência Espiritual"], 
       correctAnswer: 0
       },
       {
       question: "Quem e Pecador?",
-      options: ["O Homem", "A Mulher", "A Serpente", "Deus", "Todos"], 
+      options: ["O Homem", "A Mulher", "A Serpente", "Deus", "Todos os Homens"], 
       correctAnswer: 4
       },
     ];
