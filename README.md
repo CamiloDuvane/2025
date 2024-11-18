@@ -231,7 +231,7 @@
         <p id="question"></p>
         <div id="answerOptions"></div>
         <p id="result"></p>
-        <p id="score">Pontuação: 0/60</p>
+        <p id="score">Pontuação: 0/32</p>
         <p id="timer" class="hidden"></p>
         <button id="stopGameBtn" class="hidden">Parar Jogo</button>
       </div>
@@ -263,9 +263,9 @@
 
   <script>
     const randomNames = [
-      "João", "Maria", "Pedro", "Ana", "Lucas", "Julia", 
-      "Gabriel", "Sofia", "Miguel", "Isabella", "Arthur", "Helena",
-      "Davi", "Alice", "Bernardo", "Laura", "Heitor", "Valentina"
+      "Camilo Duvane", "Ana", "Mary", "Maria", "Lucas", "Julia", 
+      "Cíntia", "Sofia", "Miguel", "Isabella", "Arthur", "Helena",
+      "Davi", "Alice", "Bernardo", "Laura", "Valentina"
     ];
 
     let score = 0;
@@ -390,11 +390,51 @@
       options: ["Sim", "Talvez", "Não"], 
       correctAnswer: 2
       },
-
-
-
-
-      
+      {
+      question: "Será que Deus sabia que o Homem iria pecar?",
+      options: ["Sim", "Talvez", "Não"], 
+      correctAnswer: 0
+      },
+      {
+      question: "Qual é a consequencia imediata do Pecado?",
+      options: ["Vida", "Morte", "Medo", "Arrependimento"], 
+      correctAnswer: 1
+      },
+      {
+      question: "Das opções abaixo quais são os intervenientes envolvidos na queda do Homem?",
+      options: ["A Mulher, a Serpente e o Homem", "A Mulher, o Homem e a Maça", "A Mulher, o Homem e a Arvore da Vida", "A Mulher, O Homem e Deus"], 
+      correctAnswer: 0
+      },
+      {
+      question: "Quem lhe foi aumentado a dor do parto?",
+      options: ["Homem", "Mulher", "Arvore da Vida", "Deus"], 
+      correctAnswer: 1
+      },
+      {
+      question: "A quem lhe foi decretado uma vida amaldiçoada, condenada a andar sobre o seu proprio ventre e comer o pó da Terra?",
+      options: ["Homem", "Mulher", "Arvore da Vida", "Serpente"], 
+      correctAnswer: 3
+      },
+      {
+      question: "Quem lhe foi senteciado a sofrer para poder viver do seu pão?",
+      options: ["Homem", "Mulher", "Arvore da Vida", "Deus"], 
+      correctAnswer: 0
+      },
+      {
+      question: "Com a queda do Homem o Relacionamento entre o Homem e Deus foi Prejudicado. Qual e o tipo de Consequencias?",
+      options: ["Consequencia Fisica", "Consequencia Espiritual"], 
+      correctAnswer: 1
+      },
+      {
+      question: "Com a queda do Homem, o home passou a ficar Doente. Qual e o tipo de Consequencias?",
+      options: ["Consequencia Fisica", "Consequencia Espiritual"], 
+      correctAnswer: 0
+      },
+      {
+      question: "Quem e Pecador?",
+      options: ["O Homem", "A Mulher", "A Serpente", "Deus", "Todos"], 
+      correctAnswer: 4
+      },
     ];
 
     function shuffleArray(array) {
@@ -565,7 +605,7 @@
       document.getElementById('gameSeconds').value = '0';
       document.getElementById('timerSetup').classList.add('hidden');
       document.getElementById('startGameBtn').classList.add('hidden');
-      document.getElementById('score').textContent = 'Pontuação: 0/50';
+      document.getElementById('score').textContent = 'Pontuação: 0/32';
     });
 
     function toggleFullscreen() {
