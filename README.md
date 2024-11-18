@@ -289,7 +289,7 @@
         options: ["Antigo Testamento e Novo Testemunha", "Velho Testamento e Nova Testemunha", "Velho Testemunho e Novo Testamento", "Antigo Testamento e Novo Testamento"], 
         correctAnswer: 3
        }, 
-      {
+       {
         question: "Quantos livros tem a Bíblia? ",
         options: ["66", "64", "62", "60"], 
         correctAnswer: 0
@@ -300,13 +300,11 @@
         options: ["30", "24", "39", "37"], 
         correctAnswer: 2
        }, 
-
       {
         question: "Quantos livros tem o Novo Testamento? ",
         options: ["27", "23", "32", "20"], 
         correctAnswer: 0
        }, 
-
       {
        question: "O Antigo Testamento está subdividido em quantos grupos? ",
         options: ["2", "3", "4", "5"], 
@@ -317,97 +315,86 @@
         options: ["Livros Evagelicos, Livros Históricos, Livros Poéticos, Livros dos Profetas Maiores e Livros dos poetas Menores", "Livros Patateus, Livros Históricos, Livros Poéticos, Livros dos Profetas", "Livros Patateus, Livros Históricos, Livros Poéticos, Livros dos Profetas Maiores e Livros dos Profetas Menores", "Genises, Deternomio, Josué, Ester, Jô, cântaro de Salomão, Isaías, Daniel, Oseias e Malaquias"], 
         correctAnswer: 2
        }, 
-
-      {
+       {
         question: "Qual desses grupos de livros fazem parte do Antigo Testamento?",
         options: ["Livros Evangélicos, Livros Históricos, Livros Epístolas / Cartas Paulina, Livros Epístolas / Cartas Gerais, Livros Proféticos / Revelações", "Livros Históricos, Livros Epístolas / Cartas Paulina, Livros Epístolas / Cartas Gerais, Livros Proféticos", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros Proféticos / Revelações", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros de Revelações"], 
         correctAnswer: 0
       },
-
       {
        question: "Das opções as seguir qual os Sistemas de Abreviação dos livros da Bíblia que aprendeste? ",
         options: ["Sistema Antigo e Sistema Novo", "Sistema Velho e Sistema Actualizado", "Sistema Clássico e Sistema Actualizado", "Sistema Clássico e Sistema Moderno"], 
         correctAnswer: 3
-       },
+      },
       {
       question: "No sistema Moderno o que acontece com todos os livros que os nomes vão até 05 letras? ",
       options: ["Não se abrevia", "Se abrevia", "Usamos as Consoantes do nome", "Usamos a primeira Consoante e o primeira vogal"], 
       correctAnswer: 0
       },
-
       {
       question: "Em que dia da semana da criação *Deus fez a Luz*? ",
       options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
       correctAnswer: 2
       },
-
       {
       question: "Em que dia da semana da criação *Separação entre a Água e Água, Surgimento do Céu*? ",
       options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
       correctAnswer: 0
       },
-
       {
       question: "Em que dia da semana da criação *Deus fez terra seca e vegetação*? ",
       options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
       correctAnswer: 3
       },
-
-
       {
       question: "Em que dia da semana da criação *Deus criou luminares, a Lua e as estrelas*? ",
       options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
       correctAnswer: 1
       },
-
-
       {
       question: "Em que dia da semana da criação *Deus fez todo Reptil e toda ave*? ",
       options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
       correctAnswer: 3
       },
-
       {
       question: "Em que dia da semana da criação *Deus fez animais terrestres e o Homem*? ",
       options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
       correctAnswer: 0
       },
-
       {
       question: "Em que dia da semana da criação *Deus descansou*?",
       options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
       correctAnswer: 2
       },
-
       {
       question: "Que Criatura, para ser feito foi preciso um Soleno Conselho Divino?",
       options: ["Elefante", "Leão", "Mulher", "Homem"], 
       correctAnswer: 3
       },
-
       {
       question: "Qual Das alternativas descreve a criação do Homem segundo a Bíblia? ",
       options: ["Do pó da terra", "Feito da luz do sol", "Formado da água do mar", "Criado a partir de estrelas"], 
       correctAnswer: 0
       },
-
       {
       question: "Qual é a técnica cirúrgica inovadora usada por Deus, segundo o livro de Gênesis, para virar a primeira Mulher? ",
       options: ["Fez um clone direto do pó da terra", "Transformou água em ossos e carne", "Utilizou uma costela do Homem como bese", "Misturou pó da terra com luz do sol"], 
       correctAnswer: 2
       },
-
-       {
+      {
       question: "Deus fez o Homem dotado de pleno poder para governar, e em paralelo uma ordem proibitiva.",
       options: ["Falso", "Verdade"], 
       correctAnswer: 1
       },
+      {
+      question: "E importante saber o nome da arvore Proibida?",
+      options: ["Sim", "Talvez", "Não"], 
+      correctAnswer: 2
+      },
 
-{
-      question: "Qual era o tipo de arvore Proibida?",
-      options: ["Macaneira", "a", "Verdade", "Verdade"], 
-      correctAnswer: 1
-      }
+
+
+
+      
     ];
 
     function shuffleArray(array) {
