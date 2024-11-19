@@ -304,7 +304,7 @@
         correctAnswer: 0
        }, 
       {
-       question: "O Antigo Testamento está subdividido em quantos grupos? ",
+       question: "O Antigo Testamento está sub dividido em quantos grupos? ",
         options: ["2", "3", "4", "5"], 
         correctAnswer: 3
        }, 
@@ -424,7 +424,7 @@
       correctAnswer: 1
       },
       {
-      question: "Com a queda do Homem, o home passou a ficar Doente. Qual e o tipo de Consequências?",
+      question: "Com a queda do Homem, o homem passou a ficar Doente. Qual e o tipo de Consequências?",
       options: ["Consequência Fisica", "Consequência Espiritual"], 
       correctAnswer: 0
       },
