@@ -365,7 +365,7 @@
       },
       {
       question: "Que Criatura, para ser feito foi preciso um Soleno Conselho Divino?",
-      options: ["Elefante", "Leão", "Mulher", "Homem"], 
+      options: ["O Elefante", "O Leão", "A Mulher", "O Homem"], 
       correctAnswer: 3
       },
       {
