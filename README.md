@@ -233,7 +233,7 @@
         <p id="result"></p>
         <p id="score">Pontuação: 0/32</p>
         <p id="timer" class="hidden"></p>
-        <button id="stopGameBtn" class="hidden">Parar Jogo</button>
+        <button id="stopGameBtn" class="hidden">Finalizar</button>
       </div>
       <div id="gameSummary" class="hidden">
         <h2>Resumo</h2>
