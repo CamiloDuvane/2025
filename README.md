@@ -263,9 +263,7 @@
 
   <script>
     const randomNames = [
-      "Camilo Duvane", "Ana", "Mary", "Maria", "Lucas", "Julia", 
-      "Cíntia", "Sofia", "Miguel", "Isabella", "Arthur", "Helena",
-      "Davi", "Alice", "Bernardo", "Laura", "Valentina"
+      "Camilo Duvane", "Maria Langa"
     ];
 
     let score = 0;
