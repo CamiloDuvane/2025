@@ -274,7 +274,7 @@
     const questions = [
        {
         question: "O que é a Bíblia?", 
-        options: ["É conjunto de livros que contam histórias", "É um livro que serve para ser usar nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
+        options: ["É um conjunto de livros que contam histórias", "É um livro que serve para ser usado nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
         correctAnswer: 2
       }, 
       {
@@ -284,7 +284,7 @@
       },
       {
         question: "Como estão agrupados os livros da Bíblia? ",
-        options: ["Antigo Testamento e Novo Testemunha", "Velho Testamento e Nova Testemunha", "Velho Testemunho e Novo Testamento", "Antigo Testamento e Novo Testamento"], 
+        options: ["Antigo Testamento e Novo Testemunho", "Velho Testamento e Nova Testemunha", "Velho Testemunho e Novo Testamento", "Antigo Testamento e Novo Testamento"], 
         correctAnswer: 3
        }, 
        {
@@ -304,7 +304,7 @@
         correctAnswer: 0
        }, 
       {
-       question: "O Antigo Testamento está sub dividido em quantos grupos? ",
+       question: "O Antigo Testamento está sub dividido enquantos grupos? ",
         options: ["2", "3", "4", "5"], 
         correctAnswer: 3
        }, 
@@ -315,7 +315,7 @@
        }, 
        {
         question: "Qual desses grupos de livros fazem parte do Antigo Testamento?",
-        options: ["Livros Evangélicos, Livros Históricos, Livros Epístolas / Cartas Paulina, Livros Epístolas / Cartas Gerais, Livros Proféticos / Revelações", "Livros Históricos, Livros Epístolas / Cartas Paulina, Livros Epístolas / Cartas Gerais, Livros Proféticos", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros Proféticos / Revelações", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros de Revelações"], 
+        options: ["Livros Evangélicos, Livros Históricos, Livros Epístolas - Cartas Paulina, Livros Epístolas - Cartas Gerais, Livros Proféticos - Revelações", "Livros Históricos, Livros Epístolas - Cartas Paulina, Livros Epístolas - Cartas Gerais, Livros Proféticos", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros Proféticos - Revelações", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros de Revelações"], 
         correctAnswer: 0
       },
       {
@@ -324,7 +324,7 @@
         correctAnswer: 3
       },
       {
-      question: "No sistema Moderno o que acontece com todos os livros que os nomes vão até 05 letras? ",
+      question: "No sistema Moderno o que acontece com todos os livros que os nomes têm 05 letras? ",
       options: ["Não se abrevia", "Se abrevia", "Usamos as Consoantes do nome", "Usamos a primeira Consoante e o primeira vogal"], 
       correctAnswer: 0
       },
@@ -370,12 +370,12 @@
       },
       {
       question: "Qual Das alternativas descreve a criação do Homem segundo a Bíblia? ",
-      options: ["Do pó da terra", "Feito da luz do sol", "Formado da água do mar", "Criado a partir de estrelas"], 
+      options: ["Do pó da terra", "Da luz do sol", "Da água do mar", "Criado a partir das estrelas cósmicas"], 
       correctAnswer: 0
       },
       {
-      question: "Qual é a técnica cirúrgica inovadora usada por Deus, segundo o livro de Gênesis, para virar a primeira Mulher? ",
-      options: ["Fez um clone direto do pó da terra", "Transformou água em ossos e carne", "Utilizou uma costela do Homem como bese", "Misturou pó da terra com luz do sol"], 
+      question: "Qual é a técnica cirúrgica inovadora usada por Deus, segundo o livro de Gênesis, para fazer a primeira Mulher? ",
+      options: ["Fez um clone direto do pó da terra", "Transformou água em ossos e carne", "Utilizou uma costela do Homem como base", "Misturou pó da terra com luz do sol"], 
       correctAnswer: 2
       },
       {
@@ -384,7 +384,7 @@
       correctAnswer: 1
       },
       {
-      question: "E importante saber o nome da arvore Proibida?",
+      question: "E importante saber o nome da árvore Proibida?",
       options: ["Sim", "Talvez", "Não"], 
       correctAnswer: 2
       },
@@ -395,32 +395,32 @@
       },
       {
       question: "Qual é a consequencia imediata do Pecado?",
-      options: ["Vida", "Morte", "Medo", "Arrependimento"], 
+      options: ["A vida", "A morte", "O medo", "O arrependimento"], 
       correctAnswer: 1
       },
       {
       question: "Das opções abaixo quais são os intervenientes envolvidos na queda do Homem?",
-      options: ["A Mulher, a Serpente e o Homem", "A Mulher, o Homem e a Maça", "A Mulher, o Homem e a Arvore da Vida", "A Mulher, O Homem e Deus"], 
+      options: ["A Mulher, a Serpente e o Homem", "A Mulher, A serpente e a Maça", "A Mulher, o Homem e a Árvore da Vida", "A Mulher, O Homem e Deus"], 
       correctAnswer: 0
       },
       {
       question: "Quem lhe foi aumentado a dor do parto?",
-      options: ["Homem", "Mulher", "Arvore da Vida", "Deus"], 
+      options: ["O homem", "A mulher", "A árvore da Vida", "A serpente"], 
       correctAnswer: 1
       },
       {
       question: "A quem lhe foi decretado uma vida amaldiçoada, condenada a andar sobre o seu proprio ventre e comer o pó da Terra?",
-      options: ["Homem", "Mulher", "Arvore da Vida", "Serpente"], 
+      options: ["O homem", "A Mulher", "A árvore da Vida", "A serpente"], 
       correctAnswer: 3
       },
       {
-      question: "Quem lhe foi senteciado a sofrer para poder viver do seu pão?",
-      options: ["Homem", "Mulher", "Arvore da Vida", "Deus"], 
+      question: "Quem lhe foi senteciado a sofrer para poder viver do seu suor?",
+      options: ["O homem", "A mulher", "A árvore da Vida", "Deus"], 
       correctAnswer: 0
       },
       {
       question: "Com a queda do Homem o Relacionamento entre o Homem e Deus foi Prejudicado. Qual e o tipo de Consequências?",
-      options: ["ConsequênciaFisica", "Consequência Espiritual"], 
+      options: ["Consequência Física", "Consequência Espiritual"], 
       correctAnswer: 1
       },
       {
