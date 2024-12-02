@@ -445,17 +445,17 @@
       },
       {
       question: "Qual é a consequência do pecado, segundo Romanos 6:23?",
-      option: ["A pobreza", "A morte", "A doença", "A tristeza"],
+      options: ["A pobreza", "A morte", "A doença", "A tristeza"],
       correctAnswer: 1
       },
       {
       question: "Quem nos liberta do pecado, de acordo com a Bíblia?",
-      option: ["Os profetas", "Moisés", "Jesus Cristo", "O Espírito Santo"],
+      options: ["Os profetas", "Moisés", "Jesus Cristo", "O Espírito Santo"],
       correctAnswer: 2
       },
       {
       question: "O que devemos fazer para sermos perdoados por nossos pecados, segundo 1 João 1:9?",
-      option: ["Fazer sacrifícios", "Confessar os pecados", "Ajudar os pobres" "Fazer boas obras"],
+      options: ["Fazer sacrifícios", "Confessar os pecados", "Ajudar os pobres" "Fazer boas obras"],
       correctAnswer: 1
       }     
     ];
