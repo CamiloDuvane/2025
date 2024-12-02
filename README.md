@@ -455,7 +455,7 @@
       },
       {
       question: "O que devemos fazer para sermos perdoados por nossos pecados, segundo 1 João 1:9?",
-      options: ["Fazer sacrifícios", "Confessar os pecados", "Ajudar os pobres" "Fazer boas obras"],
+      options: ["Fazer sacrifícios", "Confessar os pecados", "Ajudar os pobres", "Fazer boas obras"],
       correctAnswer: 1
       }     
     ];
