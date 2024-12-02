@@ -440,7 +440,7 @@
       },
       {
       question: "O que é considerado pecado, de acordo com 1 João 3:4?",
-      options: ["Não ir à igreja", "Não dar dízimos", "A transgressão da lei" "Falar mal de outras pessoas"],
+      options: ["Não ir à igreja", "Não dar dízimos", "A transgressão da lei", "Falar mal de outras pessoas"],
       correctAnswer: 2
       },
       {
