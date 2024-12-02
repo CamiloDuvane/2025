@@ -434,9 +434,9 @@
       correctAnswer: 4
       },
       {
-        question: "Segundo a Bíblia, quem foi a primeira pessoa a pecar?",
-        options: ["Caim", "Adão e Eva", "Moisés", "Judas Iscariotes"],
-        correctAnswer: 1
+      question: "Segundo a Bíblia, quem foi a primeira pessoa a pecar?",
+      options: ["Caim", "Adão e Eva", "Moisés", "Judas Iscariotes"],
+      correctAnswer: 1
       },
       {
       question: "O que é considerado pecado, de acordo com 1 João 3:4?",
