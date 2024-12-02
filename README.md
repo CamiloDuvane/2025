@@ -433,6 +433,40 @@
       options: ["O Homem", "A Mulher", "A Serpente", "Deus", "Todos os Homens"], 
       correctAnswer: 4
       },
+      {
+        question: "Segundo a Bíblia, quem foi a primeira pessoa a pecar?",
+        options: ["Caim", "Adão e Eva", "Moisés", "Judas Iscariotes"],
+        correctAnswer: 1
+      },
+      {
+      question: "O que é considerado pecado, de acordo com 1 João 3:4?",
+      options: ["Não ir à igreja", "Não dar dízimos", "A transgressão da lei" "Falar mal de outras pessoas"],
+      correctAnswer: 2
+      },
+      {
+      question: "Qual é a consequência do pecado, segundo Romanos 6:23?",
+      option: ["A pobreza", "A morte", "A doença", "A tristeza"],
+      correctAnswer: 1
+      },
+      {
+      question: "Quem nos liberta do pecado, de acordo com a Bíblia?",
+      option: ["Os profetas", "Moisés", "Jesus Cristo", "O Espírito Santo"],
+      correctAnswer: 2
+      },
+      {
+      question: "O que devemos fazer para sermos perdoados por nossos pecados, segundo 1 João 1:9?",
+      option: ["Fazer sacrifícios", "Confessar os pecados", "Ajudar os pobres" "Fazer boas obras"],
+      correctAnswer: 1
+      }
+
+
+
+
+
+
+
+
+      
     ];
 
     function shuffleArray(array) {
