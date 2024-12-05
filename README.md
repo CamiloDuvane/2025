@@ -231,7 +231,7 @@
         <p id="question"></p>
         <div id="answerOptions"></div>
         <p id="result"></p>
-        <p id="score">Pontuação: 0/32</p>
+        <p id="score">Pontuação: 0/51</p>
         <p id="timer" class="hidden"></p>
         <button id="stopGameBtn" class="hidden">Finalizar</button>
       </div>
