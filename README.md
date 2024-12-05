@@ -273,7 +273,9 @@
     let incorrectAnswers = 0;
     const questions = [
        {
-        question: "O que é a <strong>Bíblia</strong> ?", 
+        question: "O que é a <span style="font-weight: bold;">Bíblia</span>?"
+
+, 
         options: ["É um conjunto de livros que contam histórias", "É um livro que serve para ser usado nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
         correctAnswer: 2
       }, 
