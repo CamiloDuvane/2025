@@ -258,7 +258,7 @@
         <button id="playAgainBtn">Jogar Novamente</button>
       </div>
     </div>
-    <footer>@CWD2024</footer>
+    <footer>@CWD2025</footer>
   </div>
 
   <script>
@@ -273,7 +273,7 @@
     let incorrectAnswers = 0;
     const questions = [
        {
-        question: "O que é a Bíblia?", 
+        question: "O que é a <b>Bíblia</b>?", 
         options: ["É um conjunto de livros que contam histórias", "É um livro que serve para ser usado nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
         correctAnswer: 2
       }, 
@@ -516,7 +516,7 @@
       correctAnswer: 0
       },
       {
-      question: "Quem é chamado de <b>Cordeiro de Deus que tira o pecado do mundo</b>?",
+      question: "Quem é chamado de <b>Cordeiro de Deus que tira o pecado do mundo</b> ?",
       options: ["Moisés", "João Batista", "Jesus Cristo", "Paulo"],
       correctAnswer: 2
       },
