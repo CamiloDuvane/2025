@@ -272,56 +272,56 @@
     let gameType = '';
     let incorrectAnswers = 0;
     const questions = [
-       {
-        question: "O que é a Bíblia?", 
-        options: ["É um conjunto de livros que contam histórias", "É um livro que serve para ser usado nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
-        correctAnswer: 2
+      {
+      question: "O que é a Bíblia?", 
+      options: ["É um conjunto de livros que contam histórias", "É um livro que serve para ser usado nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
+      correctAnswer: 2
       }, 
       {
-        question: "Em quantas partes está agrupada a Bíblia?", 
-        options: ["3", "2", "1", "0"],
-        correctAnswer: 1
+      question: "Em quantas partes está agrupada a Bíblia?", 
+      options: ["3", "2", "1", "0"],
+      correctAnswer: 1
       },
       {
-        question: "Como estão agrupados os livros da Bíblia? ",
-        options: ["Antigo Testamento e Novo Testemunho", "Velho Testamento e Nova Testemunha", "Velho Testemunho e Novo Testamento", "Antigo Testamento e Novo Testamento"], 
-        correctAnswer: 3
-       }, 
-       {
-        question: "Quantos livros tem a Bíblia? ",
-        options: ["66", "64", "62", "60"], 
-        correctAnswer: 0
-       }, 
+      question: "Como estão agrupados os livros da Bíblia? ",
+      options: ["Antigo Testamento e Novo Testemunho", "Velho Testamento e Nova Testemunha", "Velho Testemunho e Novo Testamento", "Antigo Testamento e Novo Testamento"], 
+      correctAnswer: 3
+      }, 
+      {
+      question: "Quantos livros tem a Bíblia? ",
+      options: ["66", "64", "62", "60"], 
+      correctAnswer: 0
+      }, 
 
       {
-        question: "Quantos livros tem o Antigo Testamento? ",
-        options: ["30", "24", "39", "37"], 
-        correctAnswer: 2
-       }, 
+      question: "Quantos livros tem o Antigo Testamento? ",
+      options: ["30", "24", "39", "37"], 
+      correctAnswer: 2
+      }, 
       {
-        question: "Quantos livros tem o Novo Testamento? ",
-        options: ["27", "23", "32", "20"], 
-        correctAnswer: 0
-       }, 
+      question: "Quantos livros tem o Novo Testamento? ",
+      options: ["27", "23", "32", "20"], 
+      correctAnswer: 0
+      }, 
       {
-       question: "O Antigo Testamento está sub dividido enquantos grupos? ",
-        options: ["2", "3", "4", "5"], 
-        correctAnswer: 3
-       }, 
+      question: "O Antigo Testamento está sub dividido enquantos grupos? ",
+      options: ["2", "3", "4", "5"], 
+      correctAnswer: 3
+      }, 
       {
-       question: "Qual desses grupos de livros fazem parte do Antigo Testamento?",
-        options: ["Livros Evagelicos, Livros Históricos, Livros Poéticos, Livros dos Profetas Maiores e Livros dos poetas Menores", "Livros Patateus, Livros Históricos, Livros Poéticos, Livros dos Profetas", "Livros Patateus, Livros Históricos, Livros Poéticos, Livros dos Profetas Maiores e Livros dos Profetas Menores", "Genises, Deternomio, Josué, Ester, Jô, cântaro de Salomão, Isaías, Daniel, Oseias e Malaquias"], 
-        correctAnswer: 2
-       }, 
-       {
-        question: "Qual desses grupos de livros fazem parte do Antigo Testamento?",
-        options: ["Livros Evangélicos, Livros Históricos, Livros Epístolas - Cartas Paulina, Livros Epístolas - Cartas Gerais, Livros Proféticos - Revelações", "Livros Históricos, Livros Epístolas - Cartas Paulina, Livros Epístolas - Cartas Gerais, Livros Proféticos", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros Proféticos - Revelações", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros de Revelações"], 
-        correctAnswer: 0
+      question: "Qual desses grupos de livros fazem parte do Antigo Testamento?",
+      options: ["Livros Evagelicos, Livros Históricos, Livros Poéticos, Livros dos Profetas Maiores e Livros dos poetas Menores", "Livros Patateus, Livros Históricos, Livros Poéticos, Livros dos Profetas", "Livros Patateus, Livros Históricos, Livros Poéticos, Livros dos Profetas Maiores e Livros dos Profetas Menores", "Genises, Deternomio, Josué, Ester, Jô, cântaro de Salomão, Isaías, Daniel, Oseias e Malaquias"], 
+      correctAnswer: 2
+      }, 
+      {
+      question: "Qual desses grupos de livros fazem parte do Antigo Testamento?",
+      options: ["Livros Evangélicos, Livros Históricos, Livros Epístolas - Cartas Paulina, Livros Epístolas - Cartas Gerais, Livros Proféticos - Revelações", "Livros Históricos, Livros Epístolas - Cartas Paulina, Livros Epístolas - Cartas Gerais, Livros Proféticos", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros Proféticos - Revelações", "Livros Evangélicos, Livros Históricos, Livros Epístolas, Livros de Revelações"], 
+      correctAnswer: 0
       },
       {
-       question: "Das opções a seguir, qual é o Sistema de Abreviação dos livros da Bíblia que aprendeste? ",
-        options: ["Sistema Antigo e Sistema Novo", "Sistema Velho e Sistema Actualizado", "Sistema Clássico e Sistema Actualizado", "Sistema Clássico e Sistema Moderno"], 
-        correctAnswer: 3
+      question: "Das opções a seguir, qual é o Sistema de Abreviação dos livros da Bíblia que aprendeste? ",
+      options: ["Sistema Antigo e Sistema Novo", "Sistema Velho e Sistema Actualizado", "Sistema Clássico e Sistema Actualizado", "Sistema Clássico e Sistema Moderno"], 
+      correctAnswer: 3
       },
       {
       question: "No sistema Moderno o que acontece com todos os livros que os nomes têm 05 letras? ",
