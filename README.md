@@ -459,14 +459,7 @@
       correctAnswer: 1
       },
       {
-      
-
-
-
-
-
-
-      question: "O que significa <b>ser salvo</b> na Bíblia?",  
+      question: "O que significa ser salvo na Bíblia?",  
       options: ["Ser protegido de perigos físicos", "Tornar-se um líder religioso", "Receber bênçãos materiais", "Ser liberto do pecado e da condenação eterna"],
       correctAnswer: 3
       },
@@ -516,7 +509,7 @@
       correctAnswer: 0
       },
       {
-      question: "Quem é chamado de <b>Cordeiro de Deus que tira o pecado do mundo</b> ?",
+      question: "Quem é chamado de Cordeiro de Deus que tira o pecado do mundo?",
       options: ["Moisés", "João Batista", "Jesus Cristo", "Paulo"],
       correctAnswer: 2
       },
