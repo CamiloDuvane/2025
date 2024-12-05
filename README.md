@@ -457,7 +457,84 @@
       question: "O que devemos fazer para sermos perdoados por nossos pecados, segundo 1 João 1:9?",
       options: ["Fazer sacrifícios", "Confessar os pecados", "Ajudar os pobres", "Fazer boas obras"],
       correctAnswer: 1
-      }     
+      },
+      {
+      
+
+
+
+
+
+
+      question: "O que significa <b>ser salvo</b> na Bíblia?",  
+      options: ["Ser protegido de perigos físicos", "Tornar-se um líder religioso", "Receber bênçãos materiais", "Ser liberto do pecado e da condenação eterna"],
+      correctAnswer: 3
+      },
+      {
+      question: "Quem é o único mediador entre Deus e os homens, segundo 1 Timóteo 2:5?",
+      options: ["Moisés", "O Espírito Santo", "Jesus Cristo", "Os apóstolos"],
+      correctAnswer: 2
+      },
+      {
+      question: "De acordo com João 3:16, o que Deus fez para nos dar a salvação?",
+      options: ["Deu Seu Filho unigênito", "Enviou anjos para nos proteger", "Prometeu riquezas aos que crerem", "Destruiu o pecado de forma instantânea"],
+      correctAnswer: 0
+      },
+      {
+      question: "O que é necessário para receber a salvação, segundo Romanos 10:9?",
+      options: ["Fazer boas obras", "Confessar com a boca que Jesus é o Senhor e crer no coração que Deus o ressuscitou", "Frequentar a igreja regularmente", "Cumprir todos os mandamentos da lei de Moisés"],
+      correctAnswer: 1
+      },
+      {
+      question: "A salvação é algo que podemos conquistar por nossos próprios esforços?",
+      options: ["Sim, através de boas obras", "Sim, obedecendo à lei de Moisés", "Não, é um presente de Deus pela graça, mediante a fé", "Depende da igreja que você frequenta"],
+      correctAnswer: 2
+      },
+      {
+      question: "Após receber a salvação, como devemos viver, segundo 2 Coríntios 5:17?",
+      options: ["Viver como novas criaturas, com mudança de vida", "Continuar como antes", "Seguir os costumes religiosos do passado", "Viver sem preocupações, pois já estamos salvos"],
+      correctAnswer: 0
+      },
+      {
+      question: "Quem recebeu de Deus as tábuas da Lei no Monte Sinai?",
+      options: ["Abraão", "Moisés", "Davi", "Noé"],
+      correctAnswer: 1
+      },
+      {
+      question: "Quantos mandamentos Deus deu nas tábuas da Lei?",
+      options: ["5", "7", "10", "12"],
+      correctAnswer: 2
+      },
+      {
+      question: "Para que serviam os sacrifícios de animais na lei do Antigo Testamento?",
+      options: ["Para alimentar os sacerdotes", "Para enriquecer o templo", "Para mostrar poder sobre os povos vizinhos", "Para simbolizar a expiação dos pecados"],
+      correctAnswer: 3
+      },
+      {
+      question: "Qual era o animal mais comumente usado no sacrifício pelos pecados no Antigo Testamento?",
+      options: ["Cordeiro", "Pomba", "Cabra", "Boi"],
+      correctAnswer: 0
+      },
+      {
+      question: "Quem é chamado de <b>Cordeiro de Deus que tira o pecado do mundo</b>?",
+      options: ["Moisés", "João Batista", "Jesus Cristo", "Paulo"],
+      correctAnswer: 2
+      },
+      {
+      question: "Qual foi o propósito principal das leis dadas por Deus no Antigo Testamento?",
+      options: ["Enriquecer o povo de Israel", "Tornar Israel mais poderoso militarmente", "Afastar Israel dos povos vizinhos", "Demonstrar a necessidade de obediência e santidade"],
+      correctAnswer: 2
+      },
+      {
+      question: "Segundo Hebreus 10:4, por que os sacrifícios de animais não eram suficientes para tirar os pecados completamente?",
+      options: ["Porque eram feitos por sacerdotes imperfeitos", "Porque o sangue de animais não podia remover pecados", "Porque eram repetidos muitas vezes", "Porque Deus rejeitou esses sacrifícios"],
+      correctAnswer: 1
+      },
+      {
+      question: "Como Jesus cumpriu a lei e os sacrifícios do Antigo Testamento?",
+      options: ["Oferecendo-se como sacrifício perfeito",, "Abolindo completamente a lei", "Tornando os sacrifícios de animais permanentes", "Introduzindo novas leis para substituir as antigas"],
+      correctAnswer: 0
+      }   
     ];
 
     function shuffleArray(array) {
