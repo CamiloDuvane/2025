@@ -272,9 +272,6 @@
     let gameType = '';
     let incorrectAnswers = 0;
     const questions = [
-
-
-      
       {
       question: "O que é a Bíblia?", 
       options: ["É um conjunto de livros que contam histórias", "É um livro que serve para ser usado nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
@@ -676,7 +673,7 @@
       },
       {
       question: "De acordo com Mateus 6:14-15, qual é a condição para que Deus nos perdoe?",
-      options: ["Fazer boas obras", "d) Não cometer mais pecados", "Jejuar regularmente", "Perdoar aqueles que nos ofendem"],
+      options: ["Fazer boas obras", "Não cometer mais pecados", "Jejuar regularmente", "Perdoar aqueles que nos ofendem"],
       correctAnswer: 3
       },
       {
@@ -706,7 +703,7 @@
       },
       {
       question: "Segundo Colossenses 3:13, como devemos perdoar uns aos outros?",
-      options: ["Baseados no exemplo de Cristo", "Somente se houver arrependimento", "De maneira parcial" "Apenas quando somos solicitados"],
+      options: ["Baseados no exemplo de Cristo", "Somente se houver arrependimento", "De maneira parcial", "Apenas quando somos solicitados"],
       correctAnswer: 0
       },
       {
