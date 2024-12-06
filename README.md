@@ -272,6 +272,9 @@
     let gameType = '';
     let incorrectAnswers = 0;
     const questions = [
+
+
+      
       {
       question: "O que é a Bíblia?", 
       options: ["É um conjunto de livros que contam histórias", "É um livro que serve para ser usado nos Domingos", "É um Conjunto de 66 Livros canônicos sagrado", "É um livro Escolar"], 
@@ -328,6 +331,10 @@
       options: ["Não se abrevia", "Se abrevia", "Usamos as Consoantes do nome", "Usamos a primeira Consoante e o primeira vogal"], 
       correctAnswer: 0
       },
+
+
+
+      
       {
       question: "Em que dia da semana Deus fez a Luz? ",
       options: ["2° dia", "4° dia", "1° dia", "3° dia"], 
@@ -363,6 +370,11 @@
       options: ["6° dia", "4° dia", "7° dia", "5° dia"], 
       correctAnswer: 2
       },
+
+
+
+
+      
       {
       question: "Que Criatura, para ser feito foi preciso um Soleno Conselho Divino?",
       options: ["O Elefante", "O Leão", "A Mulher", "O Homem"], 
@@ -394,11 +406,6 @@
       correctAnswer: 0
       },
       {
-      question: "Qual é a consequencia imediata do Pecado?",
-      options: ["A vida", "A morte", "O medo", "O arrependimento"], 
-      correctAnswer: 1
-      },
-      {
       question: "Das opções abaixo quais são os intervenientes envolvidos na queda do Homem?",
       options: ["A Mulher, a Serpente e o Homem", "A Mulher, A serpente e a Maça", "A Mulher, o Homem e a Árvore da Vida", "A Mulher, O Homem e Deus"], 
       correctAnswer: 0
@@ -428,6 +435,13 @@
       options: ["Consequência Fisica", "Consequência Espiritual"], 
       correctAnswer: 0
       },
+
+
+
+
+
+
+      
       {
       question: "Quem e Pecador?",
       options: ["O Homem", "A Mulher", "A Serpente", "Deus", "Todos os Homens"], 
@@ -458,6 +472,13 @@
       options: ["Fazer sacrifícios", "Confessar os pecados", "Ajudar os pobres", "Fazer boas obras"],
       correctAnswer: 1
       },
+
+
+
+
+
+
+      
       {
       question: "O que significa ser salvo na Bíblia?",  
       options: ["Ser protegido de perigos físicos", "Tornar-se um líder religioso", "Receber bênçãos materiais", "Ser liberto do pecado e da condenação eterna"],
@@ -488,6 +509,16 @@
       options: ["Viver como novas criaturas, com mudança de vida", "Continuar como antes", "Seguir os costumes religiosos do passado", "Viver sem preocupações, pois já estamos salvos"],
       correctAnswer: 0
       },
+
+
+
+
+
+
+      
+
+
+      
       {
       question: "Quem recebeu de Deus as tábuas da Lei no Monte Sinai?",
       options: ["Abraão", "Moisés", "Davi", "Noé"],
@@ -527,8 +558,163 @@
       question: "Como Jesus cumpriu a lei e os sacrifícios do Antigo Testamento?",
       options: ["Oferecendo-se como sacrifício perfeito",, "Abolindo completamente a lei", "Tornando os sacrifícios de animais permanentes", "Introduzindo novas leis para substituir as antigas"],
       correctAnswer: 0
-      }   
-    ];
+      },
+
+
+
+
+
+
+
+
+
+      
+      
+      {
+      question: "Segundo a Bíblia, o que é oração?",
+      options: ["Uma forma de meditação silenciosa", "Uma conversa com Deus", "Um ritual obrigatório", "Um pedido de bênçãos aos santos"],
+      correctAnswer: 1
+      },
+      {
+      question: "Qual é o modelo de oração ensinado por Jesus?",
+      options: ["A oração de Davi", "A oração de Elias", "O Pai Nosso", "O Credo Apostólico"],
+      correctAnswer: 2
+      },
+      {
+      question: "Segundo 1 Tessalonicenses 5:17, como devemos orar?",
+      options: ["Apenas ao amanhecer", "Apenas em momentos de necessidade", "Sem cessar", "Uma vez por semana"],
+      correctAnswer: 2
+      },
+      {
+      question: "Qual é a atitude correta durante a oração, de acordo com Mateus 6:5-6?",
+      options: ["Orar em secreto, para o Pai que vê em oculto", "Orar em público para que todos vejam", "Repetir muitas palavras para convencer Deus", "Permanecer em silêncio total"],
+      correctAnswer: 0
+      },
+      {
+      question: "Quem intercede por nós em oração, segundo Romanos 8:26?",
+      options: ["Os anjos", "Os apóstolos", "O Espírito Santo", "Os profetas"],
+      correctAnswer: 2
+      },
+      {
+      question: "De acordo com Tiago 5:16, qual é o poder da oração do justo?",
+      options: ["Fazer chover no deserto", "Resolver todos os problemas imediatamente", "Garantir riquezas", "Curar os doentes e ser eficaz"],
+      correctAnswer: 3
+      },
+      {
+      question: "Por que Jesus orava frequentemente, mesmo sendo o Filho de Deus?",
+      options: ["Para mostrar um exemplo aos discípulos", "Para demonstrar humildade e dependência de Deus", "Para buscar força e comunhão com o Pai", "Todas as alternativas acima"],
+      correctAnswer: 3
+      },
+      {
+      question: "Qual oração Jesus fez por seus inimigos enquanto estava na cruz?",
+      options: ["Perdoa-lhes, pois não sabem o que fazem", "Que sejam amaldiçoados", "Por que me abandonaste?", "Venha o teu Reino"],
+      correctAnswer: 0
+      },
+
+
+
+
+
+
+      
+      {
+      question: "O que é jejum, segundo a Bíblia?",
+      options: ["Uma forma de purificação física", "Abstenção de alimentos para buscar a Deus", "Um ritual obrigatório para todos os crentes", "Uma forma de disciplina física para perder peso"],
+      correctAnswer: 1
+      },
+      {
+      question: "Qual foi o propósito do jejum de Jesus no deserto?",
+      options: ["Ganhar força física", "Cumprir um ritual judaico", "Mostrar ao diabo seu poder", "Buscar poder espiritual e resistir à tentação"],
+      correctAnswer: 3
+      },
+      {
+      question: "Como devemos jejuar, de acordo com Mateus 6:16-18?",
+      options: ["Tornando nosso jejum visível para todos", "Reclamando sobre a fome para demonstrar sacrifício", "Com uma aparência alegre e sem alarde", "Apenas quando estamos em situações de emergência"],
+      correctAnswer: 2
+      },
+      {
+      question: "Por quanto tempo Moisés jejuou no Monte Sinai enquanto recebia a Lei de Deus?",
+      options: ["3 dias e 3 noites", "21 dias e 21 noite", "40 dias e 40 noites", "7 dias e 7 noites"],
+      correctAnswer: 2
+      },
+      {
+      question: "Qual foi o jejum realizado por Ester e o povo judeu?",
+      options: ["3 dias e 3 noites sem comer nem beber", "7 dias comendo apenas pão e água", "40 dias de abstenção parcial", "Apenas durante o período da manhã"],
+      correctAnswer: 0
+      },
+      {
+      question: "De acordo com Isaías 58:6, qual é o propósito do jejum que agrada a Deus?",
+      options: ["Libertar os oprimidos, quebrar jugos e praticar justiça", "Demonstrar superioridade espiritual", "Reforçar a tradição religiosa", "Mostrar arrependimento ao público"],
+      correctAnswer: 0
+      },
+      {
+      question: "Quem declarou um jejum coletivo para buscar a proteção de Deus antes de enfrentar uma grande batalha?",
+      options: ["Josué", "Neemias", "Jeosafá", "Gideão"],
+      correctAnswer: 2
+      },
+      {
+      question: "Qual foi o jejum realizado por Daniel?",
+      options: ["Abstinência total de alimentos por 40 dias", "Consumo apenas de legumes, frutas e água", "Jejum de pão e carne por 7 dias", "Apenas abstinência de água"],
+      correctAnswer: 1
+      },
+      {
+      question: "Segundo Joel 2:12, o jejum deve ser acompanhado de qual atitude?",
+      options: ["Arrependimento sincero e busca por Deus de todo o coração", "Alegria e celebração", "Uma oferta especial no templo", "Reuniões públicas de oração"],
+      correctAnswer: 0
+      },
+
+
+
+
+
+
+      
+      {
+      question: "O que Jesus ensinou sobre quantas vezes devemos perdoar alguém?",
+      options: ["Sete vezes", "Setenta vezes sete", "Apenas uma vez", "Depende da gravidade do erro"],
+      correctAnswer: 1
+      },
+      {
+      question: "De acordo com Mateus 6:14-15, qual é a condição para que Deus nos perdoe?",
+      options: ["Fazer boas obras", "d) Não cometer mais pecados", "Jejuar regularmente", "Perdoar aqueles que nos ofendem"],
+      correctAnswer: 3
+      },
+      {
+      question: "Quem disse: Pai, perdoa-lhes, pois não sabem o que fazem?",
+      options: ["Estêvão", "Pedro", "Paulo", "Jesus"],
+      correctAnswer: 3
+      },
+      {
+      question: "De acordo com 1 João 1:9, o que Deus faz quando confessamos nossos pecados?",
+      options: ["Nos ignora", "Nos condena", "Nos perdoa e nos purifica de toda injustiça", "Nos dá uma segunda chance apenas se mudarmos"],
+      correctAnswer: 2
+      },
+      {
+      question: "Na parábola do servo impiedoso (Mateus 18:23-35), o que o rei fez ao servo que lhe devia muito?",
+      options: ["Mandou-o para a prisão", "Perdoou toda a dívida", "Deu-lhe mais tempo para pagar", "Cobrou juros altos"],
+      correctAnswer: 1
+      },
+      {
+      question: "Qual atitude é essencial para buscar o perdão de Deus, segundo Salmos 51:17?",
+      options: ["Um espírito quebrantado e um coração contrito", "Uma oferta generosa", "Realizar um jejum prolongado", "Orar publicamente"],
+      correctAnswer: 0
+      },
+      {
+      question: "O que Jesus disse sobre quem não perdoa os outros?",
+      options: ["Será abençoado de outra forma", "Também não será perdoado por Deus", "Será punido diretamente", "Não enfrentará consequências"],
+      correctAnswer: 1
+      },
+      {
+      question: "Segundo Colossenses 3:13, como devemos perdoar uns aos outros?",
+      options: ["Baseados no exemplo de Cristo", "Somente se houver arrependimento", "De maneira parcial" "Apenas quando somos solicitados"],
+      correctAnswer: 0
+      },
+      {
+      question: "Na história de José e seus irmãos (Gênesis 50:15-21), como José demonstrou perdão?",
+      options: ["Pagou-lhes na mesma moeda", "Esqueceu o que haviam feito", "Tratou-os com bondade e viu o plano de Deus em tudo", "Recusou-se a falar com eles"],
+      correctAnswer: 2
+      } 
+      ];
 
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
