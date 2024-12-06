@@ -231,7 +231,7 @@
         <p id="question"></p>
         <div id="answerOptions"></div>
         <p id="result"></p>
-        <p id="score">Pontuação: 0/51</p>
+        <p id="score">Pontuação: 0/76</p>
         <p id="timer" class="hidden"></p>
         <button id="stopGameBtn" class="hidden">Finalizar</button>
       </div>
@@ -435,9 +435,6 @@
 
 
 
-
-
-
       
       {
       question: "Quem e Pecador?",
@@ -472,9 +469,6 @@
 
 
 
-
-
-
       
       {
       question: "O que significa ser salvo na Bíblia?",  
@@ -506,11 +500,6 @@
       options: ["Viver como novas criaturas, com mudança de vida", "Continuar como antes", "Seguir os costumes religiosos do passado", "Viver sem preocupações, pois já estamos salvos"],
       correctAnswer: 0
       },
-
-
-
-
-
 
       
 
@@ -558,13 +547,6 @@
       },
 
 
-
-
-
-
-
-
-
       
       
       {
@@ -607,8 +589,6 @@
       options: ["Perdoa-lhes, pois não sabem o que fazem", "Que sejam amaldiçoados", "Por que me abandonaste?", "Venha o teu Reino"],
       correctAnswer: 0
       },
-
-
 
 
 
@@ -659,9 +639,6 @@
       options: ["Arrependimento sincero e busca por Deus de todo o coração", "Alegria e celebração", "Uma oferta especial no templo", "Reuniões públicas de oração"],
       correctAnswer: 0
       },
-
-
-
 
 
 
