@@ -890,6 +890,8 @@
     document.getElementById('fullscreenToggle').addEventListener('click', toggleFullscreen);
     document.addEventListener('fullscreenchange', updateFullscreenButtonText);
   </script>
+
+
   <script type="module">
     // Import Firebase components
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js";
@@ -928,5 +930,9 @@
       }
     }
   </script>
+
+
+
+
 </body>
 </html>
