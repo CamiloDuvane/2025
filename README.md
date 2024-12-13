@@ -1,9 +1,11 @@
-<html><head><base>
+<html><head><base href=".">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Cristão</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -690,47 +692,6 @@
       } 
       ];
 
-
-
-
-
-
-
-    
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyAJzL6sk0pDZtC-jtbpLNNR1dlQ94D9ccA",
-  authDomain: "mea2024-d8f25.firebaseapp.com",
-  projectId: "mea2024-d8f25",
-  storageBucket: "mea2024-d8f25.firebasestorage.app",
-  messagingSenderId: "770842232248",
-  appId: "1:770842232248:web:3b549761e40a0df3fbfb4d",
-  measurementId: "G-EBEJ2WM5S1"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-
-
-
-
-    
-
-
-
-
-    
-
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -886,6 +847,9 @@ const analytics = getAnalytics(app);
       document.getElementById('summaryCorrect').textContent = score;
       document.getElementById('summaryIncorrect').textContent = incorrectAnswers;
       document.getElementById('summaryTotal').textContent = questionIndex;
+      
+      // Save results to Firebase
+      saveGameResults();
     }
 
     document.getElementById('playAgainBtn').addEventListener('click', function() {
@@ -925,6 +889,44 @@ const analytics = getAnalytics(app);
 
     document.getElementById('fullscreenToggle').addEventListener('click', toggleFullscreen);
     document.addEventListener('fullscreenchange', updateFullscreenButtonText);
+  </script>
+  <script type="module">
+    // Import Firebase components
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAJzL6sk0pDZtC-jtbpLNNR1dlQ94D9ccA",
+      authDomain: "mea2024-d8f25.firebaseapp.com", 
+      projectId: "mea2024-d8f25",
+      storageBucket: "mea2024-d8f25.firebasestorage.app",
+      messagingSenderId: "770842232248",
+      appId: "1:770842232248:web:3b549761e40a0df3fbfb4d",
+      measurementId: "G-EBEJ2WM5S1"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function saveGameResults() {
+      try {
+        const gameData = {
+          playerName: localStorage.getItem('playerName'),
+          score: score,
+          incorrectAnswers: incorrectAnswers,
+          totalQuestions: questionIndex,
+          gameType: gameType,
+          timestamp: new Date().toISOString()
+        };
+
+        const docRef = await addDoc(collection(db, "gameResults"), gameData);
+        console.log("Results saved with ID: ", docRef.id);
+      } catch (error) {
+        console.error("Error saving results: ", error);
+      }
+    }
   </script>
 </body>
 </html>
