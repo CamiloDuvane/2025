@@ -690,6 +690,47 @@
       } 
       ];
 
+
+
+
+
+
+
+    
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAJzL6sk0pDZtC-jtbpLNNR1dlQ94D9ccA",
+  authDomain: "mea2024-d8f25.firebaseapp.com",
+  projectId: "mea2024-d8f25",
+  storageBucket: "mea2024-d8f25.firebasestorage.app",
+  messagingSenderId: "770842232248",
+  appId: "1:770842232248:web:3b549761e40a0df3fbfb4d",
+  measurementId: "G-EBEJ2WM5S1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+
+
+
+    
+
+
+
+
+    
+
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
