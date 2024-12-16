@@ -265,7 +265,7 @@
 
   <script>
     const randomNames = [
-      "Camilo Duvane", "Maria Langa"
+      "Camilo Duvane", "Jogador sem nome"
     ];
 
     let score = 0;
