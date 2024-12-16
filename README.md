@@ -763,7 +763,7 @@
       const code = this.value;
       const orderSelect = document.getElementById('questionOrder');
       
-      if (code === '1234') {
+      if (code === '63') {
         orderSelect.disabled = false;
         this.style.borderColor = '#2ecc71';
       } else {
@@ -882,7 +882,7 @@
       document.getElementById('gameSeconds').value = '0';
       document.getElementById('timerSetup').classList.add('hidden');
       document.getElementById('startGameBtn').classList.add('hidden');
-      document.getElementById('score').textContent = 'Pontuação: 0/32';
+      document.getElementById('score').textContent = 'Pontuação: 0/76';
     });
 
     function toggleFullscreen() {
