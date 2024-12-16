@@ -265,7 +265,7 @@
 
   <script>
     const randomNames = [
-      "Camilo Duvane", "Jogador sem nome"
+      "Camilo Duvane", "Maria Langa"
     ];
 
     let score = 0;
@@ -273,6 +273,7 @@
     let timerInterval;
     let gameType = '';
     let incorrectAnswers = 0;
+    let userAnswers = [];
     const questions = [
       {
       question: "O que é a Bíblia?", 
@@ -479,7 +480,7 @@
       },
       {
       question: "Quem é o único mediador entre Deus e os homens, segundo 1 Timóteo 2:5?",
-      options: ["Moisés", "O Espírito Santo", "Jesus Cristo", "Os apóstolos"],
+      options: ["Moisés", "O Espírito Santo", "Jesus Cristo", "Paulo"],
       correctAnswer: 2
       },
       {
@@ -707,6 +708,20 @@
       }
     }
 
+    function updateDateTime() {
+      const now = new Date();
+      const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit', 
+        minute: '2-digit',
+        second: '2-digit'
+      };
+      document.getElementById('currentDateTime').textContent = now.toLocaleDateString('pt-BR', options);
+    }
+
     document.getElementById('playerRegistration').addEventListener('submit', function(e) {
       e.preventDefault();
       
@@ -773,6 +788,7 @@
     document.getElementById('startGameBtn').addEventListener('click', startGame);
 
     function startGame() {
+      userAnswers = []; // Reset user answers array
       const orderType = document.getElementById('questionOrder').value;
       if (orderType === 'random') {
         shuffleArray(questions);
@@ -812,6 +828,8 @@
 
     function checkAnswer(selectedIndex) {
       const currentQuestion = questions[questionIndex];
+      userAnswers[questionIndex] = selectedIndex; // Store the user's answer
+      
       if (selectedIndex === currentQuestion.correctAnswer) {
         score++;
         document.getElementById('result').textContent = 'Correto!';
@@ -819,6 +837,7 @@
         incorrectAnswers++;
         document.getElementById('result').textContent = 'Incorreto. A resposta certa era: ' + currentQuestion.options[currentQuestion.correctAnswer];
       }
+      
       questionIndex++;
       document.getElementById('score').textContent = `Pontuação: ${score}/${questionIndex}`;
       setTimeout(nextQuestion, 1500);
@@ -847,7 +866,7 @@
       document.getElementById('summaryCorrect').textContent = score;
       document.getElementById('summaryIncorrect').textContent = incorrectAnswers;
       document.getElementById('summaryTotal').textContent = questionIndex;
-      
+
       // Save results to Firebase
       saveGameResults();
     }
@@ -889,9 +908,43 @@
 
     document.getElementById('fullscreenToggle').addEventListener('click', toggleFullscreen);
     document.addEventListener('fullscreenchange', updateFullscreenButtonText);
+
+    async function saveGameResults() {
+      try {
+        const questionHistory = questions.slice(0, questionIndex).map((q, index) => {
+          return {
+            question: q.question,
+            options: q.options,
+            correctAnswer: q.options[q.correctAnswer],
+            userAnswer: q.options[userAnswers[index] || 0],
+            wasCorrect: userAnswers[index] === q.correctAnswer
+          };
+        });
+
+        const gameData = {
+          playerName: localStorage.getItem('playerName'),
+          gameType: gameType,
+          score: score,
+          incorrectAnswers: incorrectAnswers,
+          totalQuestions: questionIndex,
+          timestamp: new Date().toISOString(),
+          questionHistory: questionHistory,
+          gameSettings: {
+            timedGame: gameType === 'timed',
+            duration: gameType === 'timed' ? {
+              minutes: parseInt(document.getElementById('gameMinutes').value),
+              seconds: parseInt(document.getElementById('gameSeconds').value)
+            } : null
+          }
+        };
+
+        const docRef = await addDoc(collection(db, "gameResults"), gameData);
+        console.log("Results saved with ID: ", docRef.id);
+      } catch (error) {
+        console.error("Error saving results: ", error);
+      }
+    }
   </script>
-
-
   <script type="module">
     // Import Firebase components
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js";
@@ -911,28 +964,6 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-
-    async function saveGameResults() {
-      try {
-        const gameData = {
-          playerName: localStorage.getItem('playerName'),
-          score: score,
-          incorrectAnswers: incorrectAnswers,
-          totalQuestions: questionIndex,
-          gameType: gameType,
-          timestamp: new Date().toISOString()
-        };
-
-        const docRef = await addDoc(collection(db, "gameResults"), gameData);
-        console.log("Results saved with ID: ", docRef.id);
-      } catch (error) {
-        console.error("Error saving results: ", error);
-      }
-    }
   </script>
-
-
-
-
 </body>
 </html>
