@@ -4,8 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Cristão</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js"></script>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -944,22 +944,16 @@
         console.error("Error saving results: ", error);
       }
     }
-  </script>
-  <script type="module">
-    // Import Firebase components
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js";
-    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js";
-
-    // Firebase configuration
+  
     const firebaseConfig = {
-      apiKey: "AIzaSyAJzL6sk0pDZtC-jtbpLNNR1dlQ94D9ccA",
-      authDomain: "mea2024-d8f25.firebaseapp.com", 
-      projectId: "mea2024-d8f25",
-      storageBucket: "mea2024-d8f25.firebasestorage.app",
-      messagingSenderId: "770842232248",
-      appId: "1:770842232248:web:3b549761e40a0df3fbfb4d",
-      measurementId: "G-EBEJ2WM5S1"
-    };
+  apiKey: "AIzaSyD5gjkbcUrcnRVU_5pdFfjGsfKTNVi99fY",
+  authDomain: "alunos-9848d.firebaseapp.com",
+  projectId: "alunos-9848d",
+  storageBucket: "alunos-9848d.firebasestorage.app",
+  messagingSenderId: "697570485120",
+  appId: "1:697570485120:web:bf6eced55608a61bf3d765",
+  measurementId: "G-W5K72V6KTP"
+};
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
