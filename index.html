@@ -1,11 +1,12 @@
-<html><head><base href=".">
+<html>
+<head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Cristão</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -257,15 +258,147 @@
             </tr>
           </tbody>
         </table>
+        <button id="viewHighScoresBtn">Ver Pontuações</button>
         <button id="playAgainBtn">Jogar Novamente</button>
+      </div>
+      <div id="highScores" class="hidden">
+        <h2>Melhores Pontuações</h2>
+        <table id="highScoresTable">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Pontuação</th>
+              <th>Tipo de Jogo</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody id="highScoresBody">
+          </tbody>
+        </table>
+        <button id="closeHighScoresBtn">Fechar</button>
       </div>
     </div>
     <footer>@CWD2025</footer>
   </div>
 
+  <script type="module">
+    // Import Firebase components
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-analytics.js";
+    import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js";
+    import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-database.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyD5gjkbcUrcnRVU_5pdFfjGsfKTNVi99fY",
+      authDomain: "alunos-9848d.firebaseapp.com",
+      databaseURL: "https://alunos-9848d-default-rtdb.firebaseio.com",
+      projectId: "alunos-9848d",
+      storageBucket: "alunos-9848d.firebasestorage.app",
+      messagingSenderId: "697570485120",
+      appId: "1:697570485120:web:a07587c3f766239ff3d765",
+      measurementId: "G-QF8L088NSB"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+    const rtdb = getDatabase(app);
+
+    // Make db available globally
+    window.db = db;
+    window.rtdb = rtdb;
+
+    // Function to fetch and display high scores
+    async function displayHighScores() {
+      try {
+        const scoresRef = collection(db, "gameResults");
+        const q = query(scoresRef, orderBy("score", "desc"), limit(10));
+        const querySnapshot = await getDocs(q);
+        
+        const highScoresBody = document.getElementById('highScoresBody');
+        highScoresBody.innerHTML = '';
+        
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          const row = document.createElement('tr');
+          const date = new Date(data.timestamp);
+          
+          row.innerHTML = `
+            <td>${data.playerName}</td>
+            <td>${data.score}</td>
+            <td>${data.gameType === 'timed' ? 'Tempo' : 'Infinito'}</td>
+            <td>${date.toLocaleDateString('pt-BR')}</td>
+          `;
+          
+          highScoresBody.appendChild(row);
+        });
+        
+        document.getElementById('gameSummary').classList.add('hidden');
+        document.getElementById('highScores').classList.remove('hidden');
+      } catch (error) {
+        console.error("Error fetching high scores: ", error);
+      }
+    }
+
+    // Event Listeners for high scores
+    document.getElementById('viewHighScoresBtn').addEventListener('click', displayHighScores);
+    document.getElementById('closeHighScoresBtn').addEventListener('click', () => {
+      document.getElementById('highScores').classList.add('hidden');
+      document.getElementById('gameSummary').classList.remove('hidden');
+    });
+
+    // Update saveGameResults function to use both Firestore and Realtime Database
+    window.saveGameResults = async function() {
+      try {
+        const questionHistory = questions.slice(0, questionIndex).map((q, index) => {
+          return {
+            question: q.question,
+            options: q.options,
+            correctAnswer: q.options[q.correctAnswer],
+            userAnswer: q.options[userAnswers[index] || 0],
+            wasCorrect: userAnswers[index] === q.correctAnswer
+          };
+        });
+
+        const gameData = {
+          playerName: localStorage.getItem('playerName'),
+          gameType: gameType,
+          score: score,
+          incorrectAnswers: incorrectAnswers,
+          totalQuestions: questionIndex,
+          timestamp: new Date().toISOString(),
+          questionHistory: questionHistory,
+          gameSettings: {
+            timedGame: gameType === 'timed',
+            duration: gameType === 'timed' ? {
+              minutes: parseInt(document.getElementById('gameMinutes').value),
+              seconds: parseInt(document.getElementById('gameSeconds').value)
+            } : null
+          }
+        };
+
+        // Save to Firestore
+        const docRef = await addDoc(collection(db, "gameResults"), gameData);
+        
+        // Save to Realtime Database
+        const gameRef = ref(rtdb, 'games/' + docRef.id);
+        await set(gameRef, gameData);
+        
+        console.log("Results saved with ID: ", docRef.id);
+      } catch (error) {
+        console.error("Error saving results: ", error);
+      }
+    };
+
+    // Make these functions available globally
+    window.displayHighScores = displayHighScores;
+  </script>
+
   <script>
     const randomNames = [
-      "Camilo Duvane", "Jogador sem nome"
+      "Camilo Duvane", "Maria Langa"
     ];
 
     let score = 0;
@@ -624,7 +757,7 @@
       },
       {
       question: "De acordo com Isaías 58:6, qual é o propósito do jejum que agrada a Deus?",
-      options: ["Libertar os oprimidos, quebrar jugos e praticar justiça", "Demonstrar superioridade espiritual", "Reforçar a tradição religiosa", "Mostrar arrependimento ao público"],
+      options: ["Libertar os oprimidos, a quebrar jugos e praticar justiça", "Demonstrar superioridade espiritual", "Reforçar a tradição religiosa", "Mostrar arrependimento ao público"],
       correctAnswer: 0
       },
       {
@@ -763,7 +896,7 @@
       const code = this.value;
       const orderSelect = document.getElementById('questionOrder');
       
-      if (code === '63') {
+      if (code === '1234') {
         orderSelect.disabled = false;
         this.style.borderColor = '#2ecc71';
       } else {
@@ -882,7 +1015,7 @@
       document.getElementById('gameSeconds').value = '0';
       document.getElementById('timerSetup').classList.add('hidden');
       document.getElementById('startGameBtn').classList.add('hidden');
-      document.getElementById('score').textContent = 'Pontuação: 0/76';
+      document.getElementById('score').textContent = 'Pontuação: 0/32';
     });
 
     function toggleFullscreen() {
@@ -908,56 +1041,6 @@
 
     document.getElementById('fullscreenToggle').addEventListener('click', toggleFullscreen);
     document.addEventListener('fullscreenchange', updateFullscreenButtonText);
-
-    async function saveGameResults() {
-      try {
-        const questionHistory = questions.slice(0, questionIndex).map((q, index) => {
-          return {
-            question: q.question,
-            options: q.options,
-            correctAnswer: q.options[q.correctAnswer],
-            userAnswer: q.options[userAnswers[index] || 0],
-            wasCorrect: userAnswers[index] === q.correctAnswer
-          };
-        });
-
-        const gameData = {
-          playerName: localStorage.getItem('playerName'),
-          gameType: gameType,
-          score: score,
-          incorrectAnswers: incorrectAnswers,
-          totalQuestions: questionIndex,
-          timestamp: new Date().toISOString(),
-          questionHistory: questionHistory,
-          gameSettings: {
-            timedGame: gameType === 'timed',
-            duration: gameType === 'timed' ? {
-              minutes: parseInt(document.getElementById('gameMinutes').value),
-              seconds: parseInt(document.getElementById('gameSeconds').value)
-            } : null
-          }
-        };
-
-        const docRef = await addDoc(collection(db, "gameResults"), gameData);
-        console.log("Results saved with ID: ", docRef.id);
-      } catch (error) {
-        console.error("Error saving results: ", error);
-      }
-    }
-  
-    const firebaseConfig = {
-  apiKey: "AIzaSyD5gjkbcUrcnRVU_5pdFfjGsfKTNVi99fY",
-  authDomain: "alunos-9848d.firebaseapp.com",
-  projectId: "alunos-9848d",
-  storageBucket: "alunos-9848d.firebasestorage.app",
-  messagingSenderId: "697570485120",
-  appId: "1:697570485120:web:bf6eced55608a61bf3d765",
-  measurementId: "G-W5K72V6KTP"
-};
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
   </script>
 </body>
 </html>
